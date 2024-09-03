@@ -6,9 +6,7 @@ Algoritmo "Área do triângulo"
 // Data atual  : 01/09/2024
 Var
 // Seção de Declarações das variáveis 
-baset:inteiro
-alturat:inteiro
-formula:real
+baset,alturat,formula:real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 

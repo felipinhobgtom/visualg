@@ -12,12 +12,13 @@ formula:inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-escreval("Quantos anos vc tem")
+escreval("Quantos anos vc tem?")
 leia(ano)
-escreval("Qual sua idade em meses")
+escreval("Ha quantos meses foi seu aniversario?")
 leia(mes)
-escreval("Qual sua idade em dias")
+escreval("Ha quantos dias você fez mesversario?")
 leia(dias)
+
 anodias <- ano*365
 mesdias <- mes*30
 
