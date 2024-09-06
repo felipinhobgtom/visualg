@@ -34,7 +34,7 @@ Inicio
                      se numero = 7 entao
                         escreval("Sabado")
                      senao
-                        escreva("Numero maior que 7")
+                        escreva("Não é correspondente ao dia da semana")
                      fimse
                   fimse
                fimse
