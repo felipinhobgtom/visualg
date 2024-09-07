@@ -9,6 +9,9 @@ Var
    agencia,conta,palavrapasse:inteiro
    entrada,escolhamenu:inteiro
    saldo:inteiro
+
+   mercadoum:caractere
+   mercadodois:caractere
 Inicio
 
    repita
@@ -54,12 +57,19 @@ Inicio
       escreval("8 - Serviços")
       escreval("9 - Poupança")
       escreval("10 - Investimento")
+      escreval("11 - Encerrar")
       timer 0
 
       leia(escolhamenu)
-
+      
       entrada <- 0
       saldo <- 500
+      mercadoum <- "TokLeve Supermercados"
+      mercadodois <- "Mambo Supermercados"
+      
+      se escolhamenu = 11 entao
+        Fimalgoritmo
+      fimse
 
       enquanto entrada <> 1 faca
          escolha escolhamenu
@@ -74,12 +84,42 @@ Inicio
             escreval("Seu saldo atual é: ","R$",saldo,",00")
             escreval("Digite 1 para sair.")
             leia(entrada)
+         caso 2
+            limpatela
+            escreval("=============================================================")
+            escreval("                     Banco Mercado Caro                      ")
+            escreval("=============================================================")
+            escreval("")
+            escreval("VOCÊ ESCOLHEU A OPÇÃO 2 - EXTRATO")
+            escreval("")
+            escreval("07/09/2024 - Você pagou R$50,00 para: ",mercadoum)
+
+            escreval("Digite 1 para sair.")
+
+            leia(entrada)
+
+         outrocaso
+            limpatela
+            escreval("Não corresponde a nenhuma das opções.")
+            timer 600
+            timer 0
             
-            outrocaso
-            escreval("Não")
+            limpatela
+            
+            escreval("Carregando.")
+            timer 600
+            timer 0
+
+            limpatela
+            escreval("Carregando..")
+            timer 600
+            timer 0
+            
+            limpatela
+            escreval("Carregando...")
+            timer 3000
+            timer 0
             entrada <- 1
          fimescolha
       fimenquanto
    ate entrada = 0
-
-Fimalgoritmo
