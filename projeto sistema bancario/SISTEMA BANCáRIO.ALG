@@ -8,21 +8,29 @@ Var
    // Seção de Declarações das variáveis
    agencia,conta,palavrapasse:inteiro
    entrada,escolhamenu:inteiro
-   saldo:inteiro
-
-   mercadoumgasto,mercadodoisgasto:inteiro
-   mercadoum,mercadodois:caractere
+   saldo:real
 
    logar:inteiro
    opcao:inteiro
 
+   chavepixholder:caractere
+   pixholder:real
+
    confirmar:caractere
-   pix:inteiro
-   chavepix:caractere
+   pix: real
+   chavepix: caractere
+
+   extrato: vetor[1..10] de caractere
+   pixvetor: vetor[1..10] de real
+   chavepixvetor: vetor[1..10] de caractere
+
+   i:inteiro
+   cont:inteiro
 
 Inicio
 
-saldo <- 500
+   saldo <- 500
+   cont <- 0
 
    // Inicio do código, pergunta ao usuario se deseja logar ou fechar
    enquanto (logar <> 1) e (logar <> 2) faca
@@ -37,7 +45,7 @@ saldo <- 500
 
       se (logar <> 1) e (logar <> 2) entao
          limpatela
-         escreval("Opções inválidas...")
+         escreval("Opção inválida...")
          timer 1000
          timer 0
          limpatela
@@ -46,8 +54,8 @@ saldo <- 500
    fimenquanto
 
    se logar = 1 entao
-      limpatela
       repita
+         limpatela
          escreval("=============================================================")
          escreval("                     Banco Mercado Caro                      ")
          escreval("=============================================================")
@@ -70,7 +78,7 @@ saldo <- 500
             limpatela
          fimse
 
-      ate ((agencia = 4444) e (conta = 11223344) e (palavrapasse = 123))
+      ate (agencia = 4444) e (conta = 11223344) e (palavrapasse = 123)
 
    senao
       se logar = 2 entao
@@ -105,12 +113,6 @@ repita
    opcao <- 0
    entrada <- 0
 
-
-   mercadoum <- "TokLeve Supermercados"
-   mercadodois <- "Mambo Supermercados"
-   mercadoumgasto <- 50
-   mercadodoisgasto <- 20
-
    enquanto entrada <> 1 faca
       escolha escolhamenu
       caso 1
@@ -134,10 +136,18 @@ repita
          escreval("")
          escreval("VOCÊ ESCOLHEU A OPÇÃO 2 - EXTRATO")
          escreval("")
-         escreval("Nessa semana, gastou R$",mercadoumgasto+mercadodoisgasto,",00")
-         escreval("")
-         escreval("07/09/2024 - Você pagou no cartão R$",mercadoumgasto, " para: ",mercadoum)
-         escreval("08/09/2024 - Você pagou no cartão R$",mercadodoisgasto, " para: ",mercadodois)
+
+         se pix <> 0 entao
+            escreval("")
+
+            para i de 1 ate cont faca
+               escreval(i, " - ",extrato[i], pixvetor[i]," para: ", chavepixvetor[i])
+            fimpara
+
+         senao
+            escreval("Você ainda não possui registros")
+         fimse
+
          escreval("")
 
          escreval("Digite 1 para sair.")
@@ -176,21 +186,30 @@ repita
                escreval("=============================================================")
                escreval("")
                escreval("Cole aqui chave pix de quem deseja pagar: ")
-               leia(chavepix)
+               leia(chavepixholder)
                escreval("")
 
                escreval("Agora digite quanto deseja transferir")
-               leia(pix)
+               leia(pixholder)
                escreval("")
 
-               escreval("Você tem certeza que quer enviar R$",pix,",00"," para chave ", "'",chavepix,"'","?")
+               escreval("Você tem certeza que quer enviar R$",pixholder,",00"," para chave ", "'",chavepixholder,"'","?")
                escreval("Aperte Y para sim e N para não")
                leia(confirmar)
 
                se confirmar = "y" entao
                   escreval("")
+                  pix <- pixholder
+                  chavepix <- chavepixholder
+
                   saldo <- saldo-pix
+                  cont <- cont+1
                   escreval("Pagamento efetuado com sucesso!")
+
+                  pixvetor[cont] <- pix
+                  chavepixvetor[cont] <- chavepix
+
+                  extrato[cont] <- "Você pagou com pix no valor de R$"
                fimse
 
                se confirmar = "n" entao
@@ -208,11 +227,7 @@ repita
                   entrada <- 1
                fimse
 
-               se confirmar = "n" entao
-                  confirmar <- "y"
-               fimse
-
-            ate confirmar = "y"
+            ate (confirmar = "y") ou (confirmar = "n")
 
             escreval("")
             escreval("Digite 1 para sair ou Enter para tentar novamente.")
