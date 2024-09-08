@@ -95,7 +95,7 @@ repita
    escreval("                     Banco Mercado Caro                      ")
    escreval("=============================================================")
    escreval("")
-   timer 100
+   timer 75
    escreval("Seja bem vindo! como podemos ajudar?")
    escreval("1 - Saldo")
    escreval("2 - Extrato")
@@ -244,7 +244,9 @@ repita
             escreval("                     Banco Mercado Caro                      ")
             escreval("=============================================================")
             escreval("")
-            escreval("Digite 1 para sair, 2 para ver o QR Code e 3 para ver a chave PIX")
+            escreval("- Digite 1 para sair")
+            escreval("- 2 para ver o QR Code")
+            escreval("- 3 para ver a chave PIX")
             leia(opcaopix)
 
             escolha opcaopix
@@ -252,37 +254,54 @@ repita
                entrada <- 1
 
             caso 2
-            repita
-               teste <- 0
-               limpatela
-               escreval("=============================================================")
-               escreval("                     Banco Mercado Caro                      ")
-               escreval("=============================================================")
-               escreval("")
-               escreval("¦¯¯¯¯¯¯¦ ¯¯¯ ¦¯¯¯__ ¦  ___¦¦  ¯ ¦¯¯¯¯¯¯¦")
-               escreval("¦ ¦¦¦¦ ¦  ¦¯ ¦¦¦¦      ¦¦¦¦     ¦ ¦¦¦¦ ¦")
-               escreval("¦ ¦¦¦¦ ¦ ¯__ _¦__¯ ¯_¯¯_¦ ¯¯¦¦_ ¦ ¦¦¦¦ ¦")
-               escreval("¦______¦ _  ¦¯¦ ¦¯_ ¦¯¯¦¯¦ ¦  _ ¦______¦")
-               escreval("  _  ___ _  _   _¯¦¯¯¯¯_ _¯¯____   __  _")
-               escreval("  ¦¦_¯¯¯¦¦_¦_¯¯¯¯_  __ ¦_¯__¦¦¯¦   ¦¦  ¯")
-               escreval("¯¯ _ ___¦¦¦ ____ _¦¯  ¯___¯¦¦¦¯¦¦¯ __¦ ¯")
-               escreval("__ ¯¦_¦¦ _¦  ¦¦¯¯ ¦¯   ¦ ¦_¦¦¦_¯¯_ ¦¦  ¦")
-               escreval("¦ ¦¦¦¦¦¦ ¦¦¦ ¦¦¦¦¦¦¦¦¦¦¦¦ ¦¦¯¯¦¦¦¦ ¦¦¦¦¦")
-               escreval("¦¦____¯¯¦¯ ¯¦¯¯ ¯_¯¯__¯¯¯¯¯¯__ ¯ ¦_¦¦ _ ")
-               escreval("¦¯_¦_¯¯¦¯_¯¦   _¯_¯ ¯¯¯¯  ¯¯¯¯¦__¦¯  ¯¦_")
-               escreval("__¦_ _____ ¯¦¦___¦¯¯   ¯ ¯_ ¦¦¯ ¦¯_  _¯_")
-               escreval("¯¦ _¯ ¦¦¦_¯_  _ ¦¦¯¯¯¯¦¯ ¦_¯  ___¦____¯¦")
-               escreval("________ ¯¯ ¦__ __  ¯¯_¦ ¯¦¦__¦ _ ¦¯¯_ ¦")
-               escreval("¦ ____ ¦ ¦_¦¯¦¦_¯¯¯¯¦¦_  _¯¦¦¦¦___¦   ¯¦")
-               escreval("¦ ¦¦¦¦ ¦ ¦¦¦ ¦¦¦_ _  ¯¦¦_¯_¦  ¦¯¯¯¦  __¯")
-               escreval("¦ ¯¯¯¯ ¦ _¦ ¦¯¯_ ___  ¦¦¯ _   ¦ __¯  __¯")
-               escreval("¯¯¯¯¯¯¯¯       ¯   ¯¯¯   ¯¯¯  ¯ ¯¯¯  ¯¯¯")
-               escreval("")
-               escreval("Digite 1 para sair")
-               leia(teste)
-               
-               ate teste=1
+               repita
 
+                  teste <- 0
+                  limpatela
+                  escreval("=============================================================")
+                  escreval("                     Banco Mercado Caro                      ")
+                  escreval("=============================================================")
+                  escreval("")
+                  escreval("¦¯¯¯¯¯¯¦ ¯¯¯ ¦¯¯¯__ ¦  ___¦¦  ¯ ¦¯¯¯¯¯¯¦")
+                  escreval("¦ ¦¦¦¦ ¦  ¦¯ ¦¦¦¦      ¦¦¦¦     ¦ ¦¦¦¦ ¦")
+                  escreval("¦ ¦¦¦¦ ¦ ¯__ _¦__¯ ¯_¯¯_¦ ¯¯¦¦_ ¦ ¦¦¦¦ ¦")
+                  escreval("¦______¦ _  ¦¯¦ ¦¯_ ¦¯¯¦¯¦ ¦  _ ¦______¦")
+                  escreval("  _  ___ _  _   _¯¦¯¯¯¯_ _¯¯____   __  _")
+                  escreval("  ¦¦_¯¯¯¦¦_¦_¯¯¯¯_  __ ¦_¯__¦¦¯¦   ¦¦  ¯")
+                  escreval("¯¯ _ ___¦¦¦ ____ _¦¯  ¯___¯¦¦¦¯¦¦¯ __¦ ¯")
+                  escreval("__ ¯¦_¦¦ _¦  ¦¦¯¯ ¦¯   ¦ ¦_¦¦¦_¯¯_ ¦¦  ¦")
+                  escreval("¦ ¦¦¦¦¦¦ ¦¦¦ ¦¦¦¦¦¦¦¦¦¦¦¦ ¦¦¯¯¦¦¦¦ ¦¦¦¦¦")
+                  escreval("¦¦____¯¯¦¯ ¯¦¯¯ ¯_¯¯__¯¯¯¯¯¯__ ¯ ¦_¦¦ _ ")
+                  escreval("¦¯_¦_¯¯¦¯_¯¦   _¯_¯ ¯¯¯¯  ¯¯¯¯¦__¦¯  ¯¦_")
+                  escreval("__¦_ _____ ¯¦¦___¦¯¯   ¯ ¯_ ¦¦¯ ¦¯_  _¯_")
+                  escreval("¯¦ _¯ ¦¦¦_¯_  _ ¦¦¯¯¯¯¦¯ ¦_¯  ___¦____¯¦")
+                  escreval("________ ¯¯ ¦__ __  ¯¯_¦ ¯¦¦__¦ _ ¦¯¯_ ¦")
+                  escreval("¦ ____ ¦ ¦_¦¯¦¦_¯¯¯¯¦¦_  _¯¦¦¦¦___¦   ¯¦")
+                  escreval("¦ ¦¦¦¦ ¦ ¦¦¦ ¦¦¦_ _  ¯¦¦_¯_¦  ¦¯¯¯¦  __¯")
+                  escreval("¦ ¯¯¯¯ ¦ _¦ ¦¯¯_ ___  ¦¦¯ _   ¦ __¯  __¯")
+                  escreval("¯¯¯¯¯¯¯¯       ¯   ¯¯¯   ¯¯¯  ¯ ¯¯¯  ¯¯¯")
+                  escreval("")
+                  escreval("Digite 1 para sair")
+                  leia(teste)
+
+               ate teste=1
+               entrada <- 1
+
+            caso 3
+               repita
+               
+                  limpatela
+                  escreval("=============================================================")
+                  escreval("                     Banco Mercado Caro                      ")
+                  escreval("=============================================================")
+                  escreval("")
+                  escreval("A sua chave pix é: ")
+                  escreval("- felipinnbgt@gmail.com")
+                  escreval("Digite 1 para sair")
+                  leia(opcao)
+                  
+               ate opcao =1
+               entrada <- 1
 
             fimescolha
 
