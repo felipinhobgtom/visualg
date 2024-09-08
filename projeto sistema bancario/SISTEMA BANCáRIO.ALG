@@ -22,6 +22,8 @@ Var
 
 Inicio
 
+saldo <- 500
+
    // Inicio do código, pergunta ao usuario se deseja logar ou fechar
    enquanto (logar <> 1) e (logar <> 2) faca
       logar <- 0
@@ -102,7 +104,7 @@ repita
 
    opcao <- 0
    entrada <- 0
-   saldo <- 500
+
 
    mercadoum <- "TokLeve Supermercados"
    mercadodois <- "Mambo Supermercados"
@@ -168,6 +170,10 @@ repita
          escolha opcao
          caso 2
             repita
+               limpatela
+               escreval("=============================================================")
+               escreval("                     Banco Mercado Caro                      ")
+               escreval("=============================================================")
                escreval("")
                escreval("Cole aqui chave pix de quem deseja pagar: ")
                leia(chavepix)
@@ -183,7 +189,23 @@ repita
 
                se confirmar = "y" entao
                   escreval("")
+                  saldo <- saldo-pix
                   escreval("Pagamento efetuado com sucesso!")
+               fimse
+
+               se confirmar = "n" entao
+                  escreval("")
+                  escreval("O pagamento foi cancelado")
+               fimse
+
+               se (confirmar <> "y") e (confirmar <> "n") entao
+                  escreval("")
+                  escreval("Opção inválida")
+                  timer 2000
+                  timer 0
+
+                  limpatela
+                  entrada <- 1
                fimse
 
                se confirmar = "n" entao
@@ -195,9 +217,9 @@ repita
             escreval("")
             escreval("Digite 1 para sair ou Enter para tentar novamente.")
             leia(entrada)
-            
-            caso 3
-            
+
+         caso 3
+
          fimescolha
 
       caso 5
