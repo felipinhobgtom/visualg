@@ -12,6 +12,8 @@ Var
 
    logar:inteiro
    opcao:inteiro
+   opcaopix:inteiro
+   teste:inteiro
 
    chavepixholder:caractere
    pixholder:real
@@ -123,7 +125,7 @@ repita
          escreval("")
          escreval("VOCÊ ESCOLHEU A OPÇÃO 1 - SALDO")
          escreval("")
-         escreval("Seu saldo atual é: ","R$",saldo,",00")
+         escreval("Seu saldo atual é: ","R$",saldo)
          escreval("")
 
          escreval("Digite 1 para sair.")
@@ -174,10 +176,13 @@ repita
          escreval("VOCÊ ESCOLHEU A OPÇÃO 4 - PIX")
          escreval("")
 
-         escreval("Digite 2 para pagar, e 3 para receber")
+         escreval("Digite 1 para sair, 2 para pagar e 3 para receber")
          leia(opcao)
 
          escolha opcao
+         caso 1
+            entrada <- 1
+
          caso 2
             repita
                limpatela
@@ -234,6 +239,52 @@ repita
             leia(entrada)
 
          caso 3
+            limpatela
+            escreval("=============================================================")
+            escreval("                     Banco Mercado Caro                      ")
+            escreval("=============================================================")
+            escreval("")
+            escreval("Digite 1 para sair, 2 para ver o QR Code e 3 para ver a chave PIX")
+            leia(opcaopix)
+
+            escolha opcaopix
+            caso 1
+               entrada <- 1
+
+            caso 2
+            repita
+               teste <- 0
+               limpatela
+               escreval("=============================================================")
+               escreval("                     Banco Mercado Caro                      ")
+               escreval("=============================================================")
+               escreval("")
+               escreval("¦¯¯¯¯¯¯¦ ¯¯¯ ¦¯¯¯__ ¦  ___¦¦  ¯ ¦¯¯¯¯¯¯¦")
+               escreval("¦ ¦¦¦¦ ¦  ¦¯ ¦¦¦¦      ¦¦¦¦     ¦ ¦¦¦¦ ¦")
+               escreval("¦ ¦¦¦¦ ¦ ¯__ _¦__¯ ¯_¯¯_¦ ¯¯¦¦_ ¦ ¦¦¦¦ ¦")
+               escreval("¦______¦ _  ¦¯¦ ¦¯_ ¦¯¯¦¯¦ ¦  _ ¦______¦")
+               escreval("  _  ___ _  _   _¯¦¯¯¯¯_ _¯¯____   __  _")
+               escreval("  ¦¦_¯¯¯¦¦_¦_¯¯¯¯_  __ ¦_¯__¦¦¯¦   ¦¦  ¯")
+               escreval("¯¯ _ ___¦¦¦ ____ _¦¯  ¯___¯¦¦¦¯¦¦¯ __¦ ¯")
+               escreval("__ ¯¦_¦¦ _¦  ¦¦¯¯ ¦¯   ¦ ¦_¦¦¦_¯¯_ ¦¦  ¦")
+               escreval("¦ ¦¦¦¦¦¦ ¦¦¦ ¦¦¦¦¦¦¦¦¦¦¦¦ ¦¦¯¯¦¦¦¦ ¦¦¦¦¦")
+               escreval("¦¦____¯¯¦¯ ¯¦¯¯ ¯_¯¯__¯¯¯¯¯¯__ ¯ ¦_¦¦ _ ")
+               escreval("¦¯_¦_¯¯¦¯_¯¦   _¯_¯ ¯¯¯¯  ¯¯¯¯¦__¦¯  ¯¦_")
+               escreval("__¦_ _____ ¯¦¦___¦¯¯   ¯ ¯_ ¦¦¯ ¦¯_  _¯_")
+               escreval("¯¦ _¯ ¦¦¦_¯_  _ ¦¦¯¯¯¯¦¯ ¦_¯  ___¦____¯¦")
+               escreval("________ ¯¯ ¦__ __  ¯¯_¦ ¯¦¦__¦ _ ¦¯¯_ ¦")
+               escreval("¦ ____ ¦ ¦_¦¯¦¦_¯¯¯¯¦¦_  _¯¦¦¦¦___¦   ¯¦")
+               escreval("¦ ¦¦¦¦ ¦ ¦¦¦ ¦¦¦_ _  ¯¦¦_¯_¦  ¦¯¯¯¦  __¯")
+               escreval("¦ ¯¯¯¯ ¦ _¦ ¦¯¯_ ___  ¦¦¯ _   ¦ __¯  __¯")
+               escreval("¯¯¯¯¯¯¯¯       ¯   ¯¯¯   ¯¯¯  ¯ ¯¯¯  ¯¯¯")
+               escreval("")
+               escreval("Digite 1 para sair")
+               leia(teste)
+               
+               ate teste=1
+
+
+            fimescolha
 
          fimescolha
 
