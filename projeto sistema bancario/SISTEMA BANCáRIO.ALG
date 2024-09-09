@@ -90,6 +90,7 @@ se (agencia = 0) e (conta = 0) e (palavrapasse = 0) entao
 senao
 
    se logar = 1 entao
+      escreval("")
       escreval("Digite sua agência")
       leia(agencialogin)
       escreval("")
