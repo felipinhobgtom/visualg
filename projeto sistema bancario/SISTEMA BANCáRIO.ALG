@@ -10,7 +10,11 @@ Var
    entrada,escolhamenu:inteiro
    saldo:real
 
+   agencialogin,contalogin,palavrapasselogin:inteiro
+
    logar:inteiro
+
+
    opcao:inteiro
    opcaopix:inteiro
    teste:inteiro
@@ -35,59 +39,76 @@ Inicio
    cont <- 0
 
    // Inicio do código, pergunta ao usuario se deseja logar ou fechar
-   enquanto (logar <> 1) e (logar <> 2) faca
-      logar <- 0
-      escreval("=============================================================")
-      escreval("                     Banco Mercado Caro                      ")
-      escreval("=============================================================")
-      escreval("")
-      escreval("Deseja logar?")
-      escreval("Digite 1 para logar, e 2 para fechar")
-      leia(logar)
+   repita
 
-      se (logar <> 1) e (logar <> 2) entao
-         limpatela
-         escreval("Opção inválida...")
-         timer 1000
-         timer 0
-         limpatela
-      fimse
-
-   fimenquanto
-
-   se logar = 1 entao
       repita
+         logar <- 0
          limpatela
          escreval("=============================================================")
          escreval("                     Banco Mercado Caro                      ")
          escreval("=============================================================")
          escreval("")
+         escreval("Deseja logar?")
+         escreval("Digite 1 para logar, 2 para registrar e 3 para fechar")
+         leia(logar)
 
-         escreval("Digite a sua agencia (sem o dígito verificador)")
-         leia(agencia)
-
-         escreval("Digite a sua conta (sem o dígito verificador)")
-         leia(conta)
-
-         escreval("Digite a sua palavra-passe (senha numérica)")
-         leia(palavrapasse)
-
-         se (agencia <> 4444) e (conta <> 11223344) e (palavrapasse <> 123) entao
+         se logar = 2 entao
             limpatela
-            escreval("Credencias incorretas... tente novamente.")
-            timer 3000
-            timer 0
-            limpatela
+
+            escreval("Digite sua agencia")
+            leia(agencia)
+
+            escreval("Digite sua conta")
+            leia(conta)
+
+            escreval("Digite sua palavra-passe")
+            leia(palavrapasse)
+
          fimse
 
-      ate (agencia = 4444) e (conta = 11223344) e (palavrapasse = 123)
-
-   senao
-      se logar = 2 entao
+         se logar = 3 entao
 fimalgoritmo
+fimse
 
+se (logar <> 1) e (logar <> 2) e (logar <> 3) entao
+   limpatela
+   escreval("Opção inválida...")
+   timer 1000
+   timer 0
+   limpatela
 fimse
+
+
+
+se (agencia = 0) e (conta = 0) e (palavrapasse = 0) entao
+   limpatela
+   escreval("Você não se registrou.")
+   timer 3000
+   timer 0
+   limpatela
+
+senao
+
+   se logar = 1 entao
+      escreval("Digite sua agência")
+      leia(agencialogin)
+      escreval("")
+
+      escreval("Digite sua conta")
+      leia(contalogin)
+      escreval("")
+
+      escreval("Digite a sua palavra-passe")
+      leia(palavrapasselogin)
+   fimse
 fimse
+
+
+ate (agencia <> 0) e (conta <> 0) e (palavrapasse <> 0)
+
+ate (agencialogin = agencia) e (contalogin = conta) e (palavrapasselogin = palavrapasse)
+
+
 
 repita
    limpatela
@@ -289,7 +310,7 @@ repita
 
             caso 3
                repita
-               
+
                   limpatela
                   escreval("=============================================================")
                   escreval("                     Banco Mercado Caro                      ")
@@ -299,7 +320,7 @@ repita
                   escreval("- felipinnbgt@gmail.com")
                   escreval("Digite 1 para sair")
                   leia(opcao)
-                  
+
                ate opcao =1
                entrada <- 1
 
