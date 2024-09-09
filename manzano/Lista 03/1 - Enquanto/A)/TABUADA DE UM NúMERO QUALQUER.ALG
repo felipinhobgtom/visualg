@@ -1,8 +1,8 @@
 Algoritmo "Tabuada de um número qualquer"
 // Disciplina   : Lógica de programação com JavaScript
 // Professor   : Jailson 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
+// Descrição   : Solicita um valor e exibe a tabuada
+// Autor(a)    : Felipe Barros Gouveia Tome
 // Data atual  : 09/09/2024
 Var
 // Seção de Declarações das variáveis 
@@ -14,6 +14,7 @@ Inicio
 escreval("Digite um número para formar uma tabuada até o 10")
 leia(numero)
 
+cont<-1
 enquanto cont < 11 faca
 escreval(numero," x ",cont," = ",numero*cont)
 cont <- cont+1
