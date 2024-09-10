@@ -90,18 +90,14 @@ se (logar <> 1) e (logar <> 2) e (logar <> 3) entao
    limpatela
 fimse
 
+se logar = 1 entao
 
-
-se (agencia = 0) e (conta = 0) e (palavrapasse = 0) entao
-   limpatela
-   escreval("Você não se registrou.")
-   timer 3000
-   timer 0
-   limpatela
-
-senao
-
-   se logar = 1 entao
+   se (agencia = 0) e (conta = 0) e (palavrapasse = 0) entao
+      limpatela
+      escreval("Você não se registrou.")
+      timer 3000
+      timer 0
+   senao
       limpatela
       escreval("=============================================================")
       escreval("                     Banco Mercado Caro                      ")
@@ -119,7 +115,6 @@ senao
       leia(palavrapasselogin)
    fimse
 fimse
-
 
 ate (agencia <> 0) e (conta <> 0) e (palavrapasse <> 0)
 
@@ -369,30 +364,51 @@ repita
             escreval("Informe qual o banco do destinatário")
             leia(bancoholder)
             escreval("")
-            
+
             escreval("Digite a agencia do destinatário: ")
             leia(agencialogin)
             escreval("")
-            
+
             escreval("Digite o número da conta do destinatário: ")
             leia(contalogin)
             escreval("")
-            
-            escreval("É uma conta corrente ou poupança?")
-            leia(tipoconta)
-            escreval("")
-            
+
+            repita
+
+               escreval("É uma conta corrente ou poupança?")
+               leia(tipoconta)
+
+               tipoconta <- minusc(tipoconta)
+
+               se (tipoconta <> "corrente") e (tipoconta <> "poupanca") e (tipoconta <> "poupança") entao
+                  escreval("")
+                  escreval("Você não especificou corretamente o tipo da conta.")
+                  timer 1500
+                  timer 0
+               fimse
+
+               escreval("")
+
+            ate (tipoconta = "corrente") ou (tipoconta = "poupanca") ou (tipoconta = "poupança")
+
             escreval("Qual o nome do destinatário? ")
             leia(destinatarioholder)
             escreval("")
-            
+
             escreval("Quanto deseja transferir para ", destinatarioholder,"?")
             leia(valorholder)
-            
+            escreval("")
+
             escreval("Tem certeza que deseja transferir para ", destinatarioholder,", do banco ", bancoholder," o valor de R$", valorholder,"?")
+            escreval("Digite 'y' para confirmar e 'n' para cancelar.")
             leia(confirmar)
-            
-            
+            escreval("")
+
+            se confirmar = "y" entao
+
+            fimse
+
+
          fimescolha
 
       caso 6
