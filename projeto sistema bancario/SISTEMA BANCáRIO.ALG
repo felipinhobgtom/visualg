@@ -15,6 +15,10 @@ Var
    logar:inteiro
 
 
+   bancoholder:caractere
+   destinatarioholder:caractere
+   valorholder:real
+
    opcao:inteiro
    opcaopix:inteiro
    teste:inteiro
@@ -29,6 +33,11 @@ Var
    extrato: vetor[1..10] de caractere
    pixvetor: vetor[1..10] de real
    chavepixvetor: vetor[1..10] de caractere
+   valorted: vetor[1..10] de caractere
+   destinatario: vetor[1..10] de caractere
+
+   tipoconta:caractere
+
 
    i:inteiro
    cont:inteiro
@@ -54,7 +63,10 @@ Inicio
 
          se logar = 2 entao
             limpatela
-
+            escreval("=============================================================")
+            escreval("                     Banco Mercado Caro                      ")
+            escreval("=============================================================")
+            escreval("")
             escreval("Digite sua agencia")
             leia(agencia)
 
@@ -90,6 +102,10 @@ se (agencia = 0) e (conta = 0) e (palavrapasse = 0) entao
 senao
 
    se logar = 1 entao
+      limpatela
+      escreval("=============================================================")
+      escreval("                     Banco Mercado Caro                      ")
+      escreval("=============================================================")
       escreval("")
       escreval("Digite sua agência")
       leia(agencialogin)
@@ -307,7 +323,6 @@ repita
                   leia(teste)
 
                ate teste=1
-               entrada <- 1
 
             caso 3
                repita
@@ -323,7 +338,6 @@ repita
                   leia(opcao)
 
                ate opcao =1
-               entrada <- 1
 
             fimescolha
 
@@ -338,8 +352,48 @@ repita
          escreval("VOCÊ ESCOLHEU A OPÇÃO 5 - TRANSFERÊNCIA")
          escreval("")
 
-         escreval("Digite 1 para sair.")
+
+         escreval("Digite 1 para sair, 2 para transferir TED e 3 para transferir DOC.")
          leia(entrada)
+
+         escolha entrada
+         caso 1
+            entrada <- 1
+
+         caso 2
+            limpatela
+            escreval("=============================================================")
+            escreval("                     Banco Mercado Caro                      ")
+            escreval("=============================================================")
+            escreval("")
+            escreval("Informe qual o banco do destinatário")
+            leia(bancoholder)
+            escreval("")
+            
+            escreval("Digite a agencia do destinatário: ")
+            leia(agencialogin)
+            escreval("")
+            
+            escreval("Digite o número da conta do destinatário: ")
+            leia(contalogin)
+            escreval("")
+            
+            escreval("É uma conta corrente ou poupança?")
+            leia(tipoconta)
+            escreval("")
+            
+            escreval("Qual o nome do destinatário? ")
+            leia(destinatarioholder)
+            escreval("")
+            
+            escreval("Quanto deseja transferir para ", destinatarioholder,"?")
+            leia(valorholder)
+            
+            escreval("Tem certeza que deseja transferir para ", destinatarioholder,", do banco ", bancoholder," o valor de R$", valorholder,"?")
+            leia(confirmar)
+            
+            
+         fimescolha
 
       caso 6
          limpatela
