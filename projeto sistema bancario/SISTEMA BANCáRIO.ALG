@@ -405,7 +405,11 @@ repita
             escreval("")
 
             se confirmar = "y" entao
-
+              valorted[cont] <- valorholder
+              destinatario[cont] <- destinatarioholder
+              
+              saldo <- saldo-valorholder
+              cont <- cont+1
             fimse
 
 
