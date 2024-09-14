@@ -1,7 +1,7 @@
 Algoritmo "Jornada de rabalho semanal"
 // Disciplina   : Lógica de programação com JavaScript
 // Professor   : Jailson
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Descrição   : O programa armazena a sua jornada de trabalho, multiplica o salário recebido por hora pela jornada de trabalho por mes, e depois é feito a verificação se o usuário receberá o salário total com horas extras
 // Autor(a)    : Felipe Barros Gouveia Tome
 // Data atual  : 13/09/2024
 Var
@@ -39,7 +39,7 @@ Inicio
       salariohoraextra <- horaextra*salariohora*1.5
       salariototal <- (jornadatrabalho*salariohora)+salariohoraextra
       
-      escreval("O seu salário possui horas extras, logo seu salário mensal é de: R$",salariototal-salariohoraextra," e seu salário com horas extras é de: R$",salariototal," (foi adicionado um acrescimo de ",salariohoraextra,")")
+      escreval("O seu salário possui horas extras, logo seu salário mensal é de: R$",salariototal-salariohoraextra," e seu salário com horas extras é de: R$",salariototal," (foi adicionado um acrescimo de R$",salariohoraextra,")")
       senao
       
       salariototal <- horasmes*salariohora
