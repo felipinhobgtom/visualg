@@ -1,35 +1,35 @@
 Algoritmo "Soma dos dois maiores"
-// Disciplina   : Lógica de programação com JavaScript
+// Disciplina   : LÃ³gica de programaÃ§Ã£o com JavaScript
 // Professor   : Jailson
-// Descrição   : O algoritmo verifica os dois maiores números armazenados e faz a soma deles. Se dois ou mais números forem iguais o algoritmo reinicia.
-// Autor(a)    : Felipe Barros Gouveia Tomé
+// DescriÃ§Ã£o   : O algoritmo verifica os dois maiores nÃºmeros armazenados e faz a soma deles. Se dois ou mais nÃºmeros forem iguais o algoritmo reinicia.
+// Autor(a)    : Felipe Barros Gouveia TomÃ©
 // Data atual  : 14/09/2024
 Var
-   // Seção de Declarações das variáveis
+   // SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis
    numeroum,numerodois,numerotres:inteiro
 
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc...
+   // SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
    repita
       escreval("#############################")
-      escreval("Soma dos dois maiores números")
+      escreval("Soma dos dois maiores nÃºmeros")
       escreval("#############################")
       escreval("")
 
-      escreval("Digite o primeiro número.")
+      escreval("Digite o primeiro nÃºmero.")
       leia(numeroum)
       escreval("")
 
-      escreval("Digite o segundo número.")
+      escreval("Digite o segundo nÃºmero.")
       leia(numerodois)
       escreval("")
 
-      escreval("Digite o terceiro número.")
+      escreval("Digite o terceiro nÃºmero.")
       leia(numerotres)
       escreval("")
 
       se (numeroum=numerodois) ou (numeroum=numerotres) ou (numerodois=numerotres) entao
-         escreval("Dois ou mais número são iguais... tente novamente.")
+         escreval("Dois ou mais nÃºmeros sÃ£o iguais... tente novamente.")
          timer 3000
          timer 0
          limpatela
@@ -39,15 +39,15 @@ Inicio
 
    se numeroum > numerodois entao
       se numeroum > numerotres entao
-         escreval("A soma dos dois primeiros números é:",numeroum+numerotres)
+         escreval("A soma dos dois primeiros nÃºmeros Ã©:",numeroum+numerotres)
       senao
-         escreval("A soma dos dois primeiros números é:",numerotres+numeroum)
+         escreval("A soma dos dois primeiros nÃºmeros Ã©:",numerotres+numeroum)
       fimse
    fimse
 
    se numeroum < numerodois entao
       se numerodois < numerotres entao
-         escreval("A soma dos dois primeiros números é:",numerodois+numerotres)
+         escreval("A soma dos dois primeiros nÃºmeros Ã©:",numerodois+numerotres)
       fimse
    fimse
 Fimalgoritmo
