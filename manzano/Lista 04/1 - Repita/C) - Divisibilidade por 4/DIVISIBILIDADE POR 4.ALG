@@ -11,11 +11,11 @@ Var
 
 Inicio
    // Seção de Comandos, procedimento, funções, operadores, etc...
-      cont <- 1
+   cont <- 1
    repita
 
       cont <- cont+1
-      
+
       se cont mod 4 = 0 entao
          escreval("O número ",cont," é divisível por 4")
       fimse
