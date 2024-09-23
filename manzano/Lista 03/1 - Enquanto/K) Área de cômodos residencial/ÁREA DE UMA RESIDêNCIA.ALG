@@ -47,15 +47,14 @@ Inicio
       opcao <- minusc(opcao)
       escreval("")
 
-
       enquanto i <= cont faca
          areatotal <- areatotal + areacomodo[i]
          i <- i + 1
       fimenquanto
-      
+
       cont <- cont + 1
    fimenquanto
-   
-   escreval("A área residencial total acumulada é de:",areatotal)
+
+   escreval("A área residencial total acumulada é de:",areatotal,"m²")
 
 Fimalgoritmo
