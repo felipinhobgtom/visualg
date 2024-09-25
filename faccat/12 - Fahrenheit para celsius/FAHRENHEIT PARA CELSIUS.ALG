@@ -1,20 +1,20 @@
 Algoritmo "Fahrenheit para celsius"
-// Disciplina   : Lógica de programação com JavaScript
+// Disciplina   : LÃ³gica de programaÃ§Ã£o com JavaScript
 // Professor   : Jailson 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
+// DescriÃ§Ã£o   : Algoritmo que converte os graus fahrenheit para celsius
+// Autor(a)    : Felipe Barros Gouveia Tome
 // Data atual  : 06/09/2024
 Var
-// Seção de Declarações das variáveis 
+// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis 
 fahrenheit,celsius:real
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc... 
 
 escreval("Escreva uma temperatura, em fahrenheit")
 leia(fahrenheit)
 
 celsius <- (5*fahrenheit-160)/9
-escreval("Sua temperatura, em graus celsius é: ",celsius,"Cº")
+escreval("Sua temperatura, em graus celsius Ã©: ",celsius,"CÂº")
 
 Fimalgoritmo
